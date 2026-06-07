@@ -9,7 +9,7 @@
         <div class="my-3">
 
             @auth
-            <a href="{{route('create.article')}}" class="btn btn-primary">Pubblica un articolo</a>
+            <a href="{{route('create.article')}}" class="btn btn-primary">{{ __('ui.publishArticle') }}</a>
             @endauth
 
         </div>
@@ -26,7 +26,7 @@
 
                 <div class="col-12">
                     <h3 class="text-center">
-                        Non sono ancora stati creati articoli
+                        {{ __('ui.noArticles') }}
                     </h3>
                 </div>
 

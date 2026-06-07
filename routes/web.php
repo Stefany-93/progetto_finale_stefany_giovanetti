@@ -7,8 +7,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
-Route::get('/home', [PublicController::class, 'homepage'])->name('home');
-
 Route::get('/create/article', [ArticleController::class, 'create'])->middleware('auth')->name('create.article');
 
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
@@ -28,5 +26,7 @@ Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->mid
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->middleware('auth')->name('make.revisor');
 
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
+
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
 require __DIR__.'/auth.php';

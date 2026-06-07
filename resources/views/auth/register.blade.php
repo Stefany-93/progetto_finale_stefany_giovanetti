@@ -6,7 +6,7 @@
 
             <div class="col-12 text-center">
                 <h1 class="display-4 pt-5">
-                    Registrati
+                    {{ __('ui.registerTitle') }}
                 </h1>
             </div>
 

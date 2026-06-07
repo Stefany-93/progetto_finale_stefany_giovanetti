@@ -91,6 +91,12 @@
 
             </ul>
 
+            <div class="d-flex align-items-center ms-3">
+                <x-_locale lang="it" />
+                <x-_locale lang="uk" />
+                <x-_locale lang="fr" />
+            </div>
+
             <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
                 <div class="input-group">
                     <input type="search" name="query" class="form-control" placeholder="Search" aria-label="search">
