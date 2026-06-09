@@ -13,7 +13,14 @@ class Image extends Model
     use HasFactory;
 
     protected $fillable = [
-        'path'
+        'path',
+        'article_id',
+        'labels',
+        'adult',
+        'violence',
+        'spoof',
+        'racy',
+        'medical',
     ];
 
     public function article() : BelongsTo
@@ -37,5 +44,9 @@ class Image extends Model
     {
         return self::getUrlByFilePath($this->path, $w, $h);
     }
+
+    protected $casts = [
+        'labels' => 'array',
+    ];
 
 }
