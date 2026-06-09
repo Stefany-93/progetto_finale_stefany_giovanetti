@@ -33,17 +33,13 @@ class GoogleVisionLabelImage implements ShouldQueue
             return;
         }
 
-        // Carico l'immagine
         $image = file_get_contents(storage_path('app/public/' . $i->path));
 
-        // Credenziali Google Vision
         putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
-        // Client Vision
         $googleVisionClient = new ImageAnnotatorClient();
         $google_image = new VisionImage(['content' => $image]);
 
-        // Richiesta LABEL_DETECTION
         $googleFeature = new Feature();
         $googleFeature->setType(Type::LABEL_DETECTION);
 
@@ -57,7 +53,6 @@ class GoogleVisionLabelImage implements ShouldQueue
         $responseBatch = $googleVisionClient->batchAnnotateImages($batchRequest);
         $response = $responseBatch->getResponses()[0];
 
-        // Estraggo le labels
         $labels = $response->getLabelAnnotations();
 
         if ($labels) {
@@ -66,7 +61,6 @@ class GoogleVisionLabelImage implements ShouldQueue
                 $result[] = $label->getDescription();
             }
 
-            // Salvo nel database
             $i->labels = $result;
             $i->save();
         }

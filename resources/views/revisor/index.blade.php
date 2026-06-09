@@ -24,60 +24,52 @@
                                         </div>
                                         <div class="col-md-5 ps-3">
                                             <div class="card-body">
-    <h5>Labels</h5>
-
-    @if ($image->labels && count($image->labels) > 0)
-        <div class="d-flex flex-wrap gap-2">
-            @foreach ($image->labels as $label)
-                <span class="badge bg-primary">{{ $label }}</span>
-            @endforeach
-        </div>
-    @else
-        <p class="fst-italic text-muted">No labels</p>
-    @endif
-</div>
-
+                                                <h5>Labels</h5>
+                                                @if ($image->labels && count($image->labels) > 0)
+                                                    <div class="d-flex flex-wrap gap-2">
+                                                        @foreach ($image->labels as $label)
+                                                            <span class="badge bg-primary">{{ $label }}</span>
+                                                        @endforeach
+                                                    </div>
+                                                @else
+                                                    <p class="fst-italic text-muted">No labels</p>
+                                                @endif
+                                            </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="card-body">
-    <h5>Ratings</h5>
-
-    <div class="row justify-content-center align-items-center mb-1">
-        <div class="col-2 text-center">
-            <i class="{{ $image->adult }} fs-4"></i>
-        </div>
-        <div class="col-10">adult</div>
-    </div>
-
-    <div class="row justify-content-center align-items-center mb-1">
-        <div class="col-2 text-center">
-            <i class="{{ $image->violence }} fs-4"></i>
-        </div>
-        <div class="col-10">violence</div>
-    </div>
-
-    <div class="row justify-content-center align-items-center mb-1">
-        <div class="col-2 text-center">
-            <i class="{{ $image->spoof }} fs-4"></i>
-        </div>
-        <div class="col-10">spoof</div>
-    </div>
-
-    <div class="row justify-content-center align-items-center mb-1">
-        <div class="col-2 text-center">
-            <i class="{{ $image->racy }} fs-4"></i>
-        </div>
-        <div class="col-10">racy</div>
-    </div>
-
-    <div class="row justify-content-center align-items-center">
-        <div class="col-2 text-center">
-            <i class="{{ $image->medical }} fs-4"></i>
-        </div>
-        <div class="col-10">medical</div>
-    </div>
-</div>
-
+                                                <h5>Ratings</h5>
+                                                <div class="row justify-content-center align-items-center mb-1">
+                                                    <div class="col-2 text-center">
+                                                        <i class="{{ $image->adult }} fs-4"></i>
+                                                    </div>
+                                                    <div class="col-10">adult</div>
+                                                </div>
+                                                <div class="row justify-content-center align-items-center mb-1">
+                                                    <div class="col-2 text-center">
+                                                        <i class="{{ $image->violence }} fs-4"></i>
+                                                    </div>
+                                                    <div class="col-10">violence</div>
+                                                </div>
+                                                <div class="row justify-content-center align-items-center mb-1">
+                                                    <div class="col-2 text-center">
+                                                        <i class="{{ $image->spoof }} fs-4"></i>
+                                                    </div>
+                                                    <div class="col-10">spoof</div>
+                                                </div>
+                                                <div class="row justify-content-center align-items-center mb-1">
+                                                    <div class="col-2 text-center">
+                                                        <i class="{{ $image->racy }} fs-4"></i>
+                                                    </div>
+                                                    <div class="col-10">racy</div>
+                                                </div>
+                                                <div class="row justify-content-center align-items-center">
+                                                    <div class="col-2 text-center">
+                                                        <i class="{{ $image->medical }} fs-4"></i>
+                                                    </div>
+                                                    <div class="col-10">medical</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
