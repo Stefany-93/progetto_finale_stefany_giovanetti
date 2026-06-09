@@ -1,6 +1,6 @@
 <div class="card mx-auto card-w shadow text-center mb-3">
     
-    <img src="{{ $article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : 'https://picsum.photos/200' }}" alt="Immagine dell'articolo {{ $article->title }}" class="card-img-top">
+    <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/200' }}" alt="Immagine dell'articolo {{ $article->title }}" class="card-img-top">
     
     <div class="card-body">
 

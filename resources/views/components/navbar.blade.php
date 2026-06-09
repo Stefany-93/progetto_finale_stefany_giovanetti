@@ -17,19 +17,19 @@
                     <a class="nav-link active" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item nav-custom">
-                    <a class="nav-link" aria-current="page" href="{{ route('article.index') }}">Tutti gli articoli</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('article.index') }}">{{ __('ui.allArticles') }}</a>
                 </li>
 
                 @auth
 
                 <li class="nav-item dropdown nav-custom">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                        {{ __('ui.allCategories') }}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                             <li>
-                                <a class="dropdown-item" href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
+                                <a class="dropdown-item" href="{{ route('byCategory', ['category' => $category]) }}">{{__("ui.$category->name")}}</a>
                             </li>
                             @if (!$loop->last)
                                 <hr class="dropdown-divider">
@@ -41,7 +41,7 @@
                 @if (Auth::user()->is_revisor)
                     <li class="nav-item nav-custom">
                         <a class="nav-link btn btn-light btn-sm position-relative w-sm-25" href="{{ route('revisor.index') }}">
-                            Zona Revisore
+                            {{ __('ui.revisorZone') }}
                         </a>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {{ \App\Models\Article::toBeRevisedCount() }}
@@ -52,15 +52,15 @@
                 <li class="nav-item dropdown">
 
                     <a href="#" class="nav-link dropdown-toggle nav-custom" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ciao {{Auth:: user()->name}}
+                        {{ __('ui.userNameHello') }}{{Auth:: user()->name}}
                     </a>
 
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="{{ route('create.article')}}" class="dropdown-item nav-custom">Crea</a>
+                            <a href="{{ route('create.article')}}" class="dropdown-item nav-custom">{{ __('ui.toCreate') }}</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+                            <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">{{ __('ui.userLogout') }}</a>
                         </li>
                         <form id="form-logout" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
@@ -75,13 +75,13 @@
 
                     <a class="nav-link dropdown-toggle nav-custom" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Ciao Utente
+                        {{ __('ui.userHello') }}
                     </a>
 
                     <ul class="dropdown-menu ">
 
-                        <li><a class="dropdown-item nav-custom" href="{{ route('login')}}">Accedi</a></li>
-                        <li><a class="dropdown-item nav-custom" href="{{ route('register')}}">Registrati</a></li>
+                        <li><a class="dropdown-item nav-custom" href="{{ route('login')}}">{{ __('ui.userLogin') }}</a></li>
+                        <li><a class="dropdown-item nav-custom" href="{{ route('register')}}">{{ __('ui.userRegister') }}</a></li>
 
                     </ul>
 
@@ -99,9 +99,9 @@
 
             <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
                 <div class="input-group">
-                    <input type="search" name="query" class="form-control" placeholder="Search" aria-label="search">
+                    <input type="search" name="query" class="form-control" placeholder="{{ __('ui.toSearch') }}" aria-label="search">
                     <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
-                        Search
+                        {{ __('ui.toSearch') }}
                     </button>
                 </div>
             </form>

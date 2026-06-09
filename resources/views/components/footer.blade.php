@@ -1,9 +1,9 @@
 <footer class="bg-azzurro text-center">
 
     <div class="col-12 mb-3 text-center">
-        <h5>Vuoi diventare revisore?</h5>
-        <p>Cliccando il bottone sottostante farai richiesta al nostro admin</p>
-        <a href="{{ route('become.revisor') }}" class="btn btn-primary">Diventa revisore</a>
+        <h5>{{ __('ui.wannabeRevisor') }}</h5>
+        <p>{{ __('ui.howToAskRevisor') }}</p>
+        <a href="{{ route('become.revisor') }}" class="btn btn-primary">{{ __('ui.buttonRevisor') }}</a>
     </div>
 
     <div class="container p-4 pb-0">
