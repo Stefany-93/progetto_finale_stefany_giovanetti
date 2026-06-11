@@ -15,7 +15,7 @@ use Illuminate\Queue\SerializesModels;
 use Spatie\Image\Enums\Fit;
 use Spatie\Image\Image as SpatieImage;
 use Google\Cloud\Vision\V1\Image as VisionImage;
-use Google\Cloud\Vision\V1\ImageAnnotatorClient;
+use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
 use Spatie\Image\Enums\AlignPosition;
 
 class RemoveFaces implements ShouldQueue
