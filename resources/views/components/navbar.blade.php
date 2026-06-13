@@ -43,7 +43,7 @@
                         <a class="nav-link btn btn-light btn-sm position-relative w-sm-25" href="{{ route('revisor.index') }}">
                             {{ __('ui.revisorZone') }}
                         </a>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        <span class="badge rounded-pill bg-danger badge-revisor position-absolute top-0 end-0">
                             {{ \App\Models\Article::toBeRevisedCount() }}
                         </span>
                     </li>
@@ -99,11 +99,11 @@
 
             <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
                 <div class="input-group">
-                    <input type="search" name="query" class="form-control" placeholder="{{ __('ui.toSearch') }}" aria-label="search">
-                    <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
+                    <input type="search" name="query" class="form-control search-input" placeholder="{{ __('ui.toSearch') }}">
+                    <button type="submit" class="search-btn">
                         {{ __('ui.toSearch') }}
                     </button>
-                </div>
+             </div>
             </form>
 
         </div>

@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
 
             <div class="col-12 text-center">
-                <h1 class="display-4 pt-5">
+                <h1 class="display-4 pt-5 text-arancione">
                     Registrati
                 </h1>
             </div>
@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-dark">Registrati</button>
+                        <button type="submit" class="btn btn-arancione">Registrati</button>
                     </div>
 
                 </form>

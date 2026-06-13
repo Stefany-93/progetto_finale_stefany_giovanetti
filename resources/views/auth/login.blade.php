@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
 
             <div class="col-12 text-center">
-                <h1 class="display-4 pt-5">
+                <h1 class="display-4 pt-5 text-arancione">
                     Accedi
                 </h1>
             </div>
@@ -16,9 +16,9 @@
 
             <div class="col-12 col-md-6">
 
-                <form method="POST" action="{{ route('login')}}" class="bg-secondary-subtle shadow rounder p-5">
+                <form method="POST" action="{{ route('login')}}" class="bg-body-tertiary shadow rounder p-5">
 
-                    @csrf
+                    @csrf 
 
                     <div class="mb-3">
                         <label for="loginEmail" class="form-label">Email</label>
@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-dark">Accedi</button>
+                        <button type="submit" class="btn btn-arancione">Accedi</button>
                     </div>
 
                 </form>

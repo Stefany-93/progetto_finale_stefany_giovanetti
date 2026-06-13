@@ -3,7 +3,7 @@
     <div class="col-12 mb-3 text-center">
         <h5>{{ __('ui.wannabeRevisor') }}</h5>
         <p>{{ __('ui.howToAskRevisor') }}</p>
-        <a href="{{ route('become.revisor') }}" class="btn btn-primary">{{ __('ui.buttonRevisor') }}</a>
+        <a href="{{ route('become.revisor') }}" class="btn btn-arancione">{{ __('ui.buttonRevisor') }}</a>
     </div>
 
     <div class="container p-4 pb-0">

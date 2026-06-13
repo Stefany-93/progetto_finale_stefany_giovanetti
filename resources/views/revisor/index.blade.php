@@ -2,8 +2,8 @@
     <div class="container-fluid pt-5">
         <div class="row">
             <div class="col-3">
-                <div class="rounded shadow bg-body-secondary">
-                    <h1 class="display-5 text-center pb-2">
+                <div class="rounded shadow bg-arancione">
+                    <h1 class="display-5 text-center pb-2 text-blu">
                         Revisor dashboard
                     </h1>
                 </div>
@@ -120,7 +120,7 @@
                 <h1 class="fst-italic display-4">
                     Nessun articolo da revisionare
                 </h1>
-                <a href="{{ route('homepage') }}" class="mt-5 btn btn-success"> Torna all'homepage</a>
+                <a href="{{ route('homepage') }}" class="mt-5 btn btn-arancione"> Torna all'homepage</a>
             </div>
         </div>
         @endif

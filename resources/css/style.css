@@ -18,6 +18,10 @@
     background-color: var(--azzurro);
 }
 
+.bg-arancione{
+    background-color: var(--arancione);
+}
+
 .text-turchese{
     color: var(--turchese);
 }
@@ -28,6 +32,10 @@
 
 .text-bianco{
     color: var(--bianco);
+}
+
+.text-arancione{
+    color: var(--arancione);
 }
 
 .title {
@@ -42,7 +50,7 @@
 }
 
 .height-custom {
-    min-height: calc(100vh - 160px); /* navbar + footer */
+    min-height: calc(100vh - 160px);
 }
 
 .box-bg{
@@ -78,3 +86,74 @@ main {
     height: 120px;
     width: 120px;
 }
+
+.badge-revisor {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: 2px solid var(--bianco);
+    box-shadow: 0 0 6px var(--blu);
+}
+
+.search-input {
+    border: 2px solid var(--arancione) !important;
+    border-right: none;
+    background-color: var(--bianco) !important;
+    color: var(--blu) !important;
+}
+
+.search-input:focus {
+    border-color: var(--arancione) !important;
+}
+
+.search-btn {
+    background-color: var(--arancione) !important;
+    color: var(--bianco) !important;
+    border: 2px solid var(--arancione) !important;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.search-btn:hover {
+    background-color: var(--bianco) !important;
+    color: var(--arancione) !important;
+}
+
+.search-input,
+.search-input:focus,
+.search-btn,
+.input-group > .form-control {
+    box-shadow: none !important;
+}
+
+.btn-arancione {
+    background-color: var(--arancione) !important;
+    color: var(--bianco) !important;
+    border: 2px solid var(--arancione) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-arancione:hover {
+    background-color: var(--bianco) !important;
+    color: var(--arancione) !important;
+}
+
+.btn-card {
+    background-color: white !important;
+    color: var(--arancione) !important;
+    border: 2px solid var(--arancione) !important;  
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-card:hover {
+    background-color: var(--arancione) !important;
+    color: var(--bianco) !important;
+}
+
+
+

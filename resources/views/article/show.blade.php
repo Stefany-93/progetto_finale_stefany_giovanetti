@@ -40,9 +40,9 @@
                     {{ $article->title }}
                 </h2>
                 <div class="d-flex flex-column justify-content-center h-75">
-                    <h4 class="fw-bold">Prezzo: {{ $article->price }} €</h4>
-                    <h5>Descrizione:</h5>
-                    <p>{{ $article->description }}</p>
+                    <h4 class="fw-bold text-arancione">Prezzo: {{ $article->price }} €</h4>
+                    <h5 class="text-arancione">Descrizione:</h5>
+                    <p class="text-arancione">{{ $article->description }}</p>
                 </div>
             </div>
                 

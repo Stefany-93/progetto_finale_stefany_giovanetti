@@ -9,7 +9,7 @@
         <div class="my-3">
 
             @auth
-            <a href="{{route('create.article')}}" class="btn btn-primary">{{ __('ui.publishArticle') }}</a>
+            <a href="{{route('create.article')}}" class="btn btn-arancione">{{ __('ui.publishArticle') }}</a>
             @endauth
 
         </div>
