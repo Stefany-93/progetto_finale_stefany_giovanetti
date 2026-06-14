@@ -26,7 +26,7 @@
                     </h3>
 
                     @auth
-                        <a class="btn btn-dark my-5" href="{{ route('create.article') }}">Pubblica un articolo</a>
+                        <a class="btn btn-arancione my-5" href="{{ route('create.article') }}">Pubblica un articolo</a>
                     @endauth
 
                 </div>

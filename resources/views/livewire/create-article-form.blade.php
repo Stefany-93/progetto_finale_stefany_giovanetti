@@ -64,7 +64,7 @@
     @endif
 
     <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-primary mb-3">Inserisci il tuo annuncio</button>
+        <button type="submit" class="btn btn-arancione">Inserisci il tuo annuncio</button>
     </div>
 
     @if(session()->has('success'))
